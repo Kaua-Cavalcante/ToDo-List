@@ -4,8 +4,7 @@ type ContainerProps = {
     done: boolean;
 }
 
-export const Container = styled.div(({ done }: ContainerProps) => (
-    `
+export const Container = styled.div(({ done }: ContainerProps) => (`
     display: flex;
     align-items: center;
     padding: 10px;
@@ -14,8 +13,8 @@ export const Container = styled.div(({ done }: ContainerProps) => (
     background-color: #20212C;
 
     input {
-        width: 25px;
-        height: 25px;
+        width: 20px;
+        height: 20px;
         margin-right: 5px;
     }
 
@@ -23,5 +22,9 @@ export const Container = styled.div(({ done }: ContainerProps) => (
         color: #CCC;
         text-decoration: ${done ? 'line-through' : 'initial'};
     }
-`
-));
+`));
+
+export const Area = styled.div `
+    margin-left: auto;
+    margin-right: 0;
+`;

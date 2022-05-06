@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import * as C from './styles';
 import { Item } from '../../types/Item';
+import { DeleteIcon } from '../DeleteIcon';
 
 type Props = {
     item: Item
@@ -17,6 +18,10 @@ export const ListItem = ({ item }: Props) => {
                 onChange={e => setIsChecked(e.target.checked)}
             />
             <label>{item.name}</label>
+
+            <C.Area>
+                <DeleteIcon />
+            </C.Area>
         </C.Container>
     );
 }
